@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Roupas</title>
+    <!-- Bootswatch Theme -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cadastro.css">
+    <style type="text/css">
+        body {
+            background-image: url(t.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            background-color: #fafafa; /* Cor de fundo do body */
+        }
+        .navbar {
+            background-color: #ffdede; /* Cor do fundo da navbar */
+        }
+        .navbar-brand {
+            color: #ffdede; /* Cor do texto da navbar */
+        }
+        .card-header {
+            background-color: #6a0000; /* Cor do fundo do cabeçalho do card */
+            color: #ffdede; /* Cor do texto do cabeçalho do card */
+        }
+        .btn-primary {
+            background-color: #6a0000; /* Cor do botão */
+            border-color: #6a0000; /* Cor da borda do botão */
+        }
+        .btn-primary:hover {
+            background-color: #5a0000; /* Cor do botão ao passar o mouse */
+            border-color: #5a0000; /* Cor da borda do botão ao passar o mouse */
+        }
+        .form-control {
+            border-color: #6a0000; /* Cor da borda dos campos de entrada */
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light justify-content-center">
+        <a class="navbar-brand highlight" href="#">Cadastro de Roupas</a>
+    </nav>
+    
+    <style>
+        .highlight {
+            font-weight: bold; 
+        }
+    </style>
+
+    <div class="container">
+        <!-- APPLICATION -->
+        <div id="App" class="row pt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Adicionando Produtos</h4>
+                    </div>
+                    <form id="product-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Nome do Produto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="price" step="0.01" placeholder="Preço do Produto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="descrição do Produto" class="form-control">
+                        </div>
+                        <input type="submit" value="Save" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+
+            <div id="product-list" class="col

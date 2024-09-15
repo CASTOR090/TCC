@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ateliê Pano Fino</title>
+    
+    <style>
+        /* Reseta alguns estilos padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Estilos do Header */
+        header {
+            background-color: #ffdede;
+            border-bottom: 2px solid #6a0000;
+            padding: 10px 20px;
+        }
+
+        .top-header {
+            background-color: #fbd7d7;
+            padding: 5px 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #6a0000;
+        }
+
+        .top-header .top.social i {
+            color: #6a0000;
+        }
+
+        .hdr {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .logoamf img {
+            height: 50px;
+        }
+
+        .pesquisa {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px 10px;
+            background-color: #fff;
+        }
+
+        .input-pesquisa {
+            border: none;
+            outline: none;
+            padding: 5px;
+            width: 200px;
+        }
+
+        .carrinho {
+            position: relative;
+        }
+
+        .carrinho img {
+            height: 40px;
+        }
+
+        .aba-carrinho-aberta {
+            display: none; /* Inicialmente escondido */
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .titulo-carrinho {
+            background-color: #ffdede;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #6a0000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            padding: 10px 20px;
+            background-color: #fff;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #6a0000;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-list a:hover {
+            color: #f04c4c;
+        }
+
+        /* Estilos do Carrossel */
+        .carrosel {
+            margin: 20px 0;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Estilos do Main */
+        .main-index {
+            padding: 20px;
+        }
+
+        .container-categoria {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .categoria {
+            position: relative;
+            width: 30%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .overlay-categoria {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .categoria:hover .overlay-categoria {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .titulo-categoria {
+            font-size: 24px;
+        }
+
+        .false-button-categoria {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .false-button-categoria:hover {
+            background-color: #fff;
+            color: #6a0000;
+        }
+
+        .secao-maisVendidos {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #ffdede;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .titulo-secao {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #6a0000;
+        }
+
+        .container-produtos {
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: #6a0000;
+        }
+
+        /* Estilos do Banner Informativo */
+        .banner-informativo {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #ffdede;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .informativo {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .div-img-info img {
+            margin-right: 10px;
+        }
+
+        .informativo h3 {
+            margin: 0;
+            color: #6a0000;
+        }
+
+        /* Estilos do Footer */
+        footer {
+            background-color: #ffdede;
+            padding: 20px;
+            border-top: 2px solid #6a0000;
+            text-align: center;
+        }
+
+        .contfoot {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contfoot h2 {
+            font-size: 18px;
+            color: #6a0000;
+        }
+
+        .contfoot ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contfoot ul li {
+            margin-bottom: 10px;
+            color: #6a0000;
+        }
+
+        .form-footer, .banner-instagram {
+            padding: 20px;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .input-form {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0;
+        }
+
+        .btn-insta {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: 1px solid #6a0000;
+            background-color: #6a0000;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-insta:hover {
+            background-color: #f04c4c;
+            color: #fff;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hdr {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .nav-list a {
+                padding: 10px;
+                text-align: center;
+            }
+
+            .container-categoria {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .categoria {
+                width: 80%;
+                height: 150px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/108acab114.js" crossorigin="anonymous" defer></script>
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <div class="top social">
+                <span><i class="fa fa-phone"></i> Atendimento:(11)  99999-9999</span>
+                <span><i class="fa fa-envelope"></i> contato@ateliepano.com.br</span>
+            </div>
+        </div>
+        <div class="hdr">
+            <div class="logoamf">
+                <img src="./l/jj.png" alt="Ateliê Pano Fino">
+            </div>
+            <div class="pesquisa">
+                <input type="text" class="input-pesquisa" placeholder="Pesquisar...">
+            </div>
+            <div class="user adm">
+                <a href="login.html">
+                    <img src="./l/e.png" width="60" height="50" alt="Descrição da Imagem">
+                  </a>
+                  
+                <link rel="stylesheet" href="login.css">
+                <link rel="stylesheet" href="login.html">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-list"> 
+            <a href="index.html">Início</a>
+            <a href="./html's/blusas.html">Blusas</a>
+            <a href="./html's/conjuntos.html">Conjuntos</a>
+            <a href="./html's/vestidos.html">Vestidos</a>
+            <a href="./html's/calcas.html">Calças</a>
+            <a href="./html's/saias.html">Saias</a>
+        </div>
+    </header>
+
+    <section class="carrosel">
+        <div class="swiper carrosel-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide card-carrosel"><img src="./img/pf_slide1-carrosel.jpg" class="img-pf_slide1-carrosel" alt=""></div>
+                <div class="swiper-slide"><img src="./img/pf_slide2-carrosel.webp" class="img-pf_slide2-carrosel" alt=""></div>
+                <div class="swiper-slide"><img src="./img/pf_slide3-carrosel.avif" class="img-pf_slide3-carrosel" alt=""></div>
+                <div class="swiper-slide"><img src="./img/img-slide4-carrosel" class="img-pf_slide4-carrosel" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <main class="main-index">
+        <section class="contmain">
+            <div class="container-categoria">
+                <div class="categoria street" style="background-image: url('');">
+                    <div class="overlay-categoria">
+                        <div class="titulo-categoria">
+                            <p>VESTIDOS</p>
+                            <br>
+                            <span class="false-button-categoria">Explorar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="categoria street2" style="background-image: url('01.jpg');">
+                    <div class="overlay-categoria">
+                        <div class="titulo-categoria">
+
+                            <p>CALÇAS</p>
+                            <br>
+                            <span class="false-button-categoria">Explorar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="categoria vintage" style="background-image: url('tt.jpg');">
+                    <div class="overlay-categoria">
+                        <div class="titulo-categoria">
+                            <p>SAIAS</p>
+                            <br>
+                            <span class="false-button-categoria">Explorar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-maisVendidos">
+            <span class="titulo-secao">Mais Vendidos</span>
+            <div class="container-produtos">
+                <div class="swiper-wrapper cont-wrapper" id="container01"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>        
+        </section>
+
+        <div class="banner-informativo">
+            <div class="informativo">
+                <div class="aling-center-info">
+                    <div class="div-img-info">
+                        <img src="./l/foto4.png"  width="70px" height="70px" alt="">
+                    </div>
+                    <h3>Entregamos para todo o Brasil!</h3>
+                </div>
+            </div>
+            <div class="informativo">
+                <div class="aling-center-info">
+                    <div class="div-img-info">
+                        <img src="./l/foto1.png" width="70px" height="70px" alt="">
+                    </div>
+                    <h3>Dividimos em até 12x</h3>
+                </div>
+            </div>
+            <div class="informativo">
+                <div class="aling-center-info">
+                    <div class="div-img-info">
+                        <img src="./l/foto5.png" width="70px" height="70px" alt="">
+                    </div>
+                    <h3>Compra segura</h3>
+                </div>
+            </div>
+            <div class="informativo">
+                <div class="aling-center-info">
+                    <div class="div-img-info">
+                        <img src="./l/j.png" width="70px" height="70px" alt="">
+                    </div>
+                    <h3>Compre também por Whatsapp</h3>
+                </div>
+            </div>
+        </div>
+
+        <section class="secao-maisVendidos segunda-section">
+            <span class="titulo-secao">Nacionais</span>
+            <div class="container-produtos">
+                <div class="swiper-wrapper cont-wrapper segundo-wrapper" id="container02"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>        
+        </section>
+
+        <section class="secao-maisVendidos terceira-section">
+            <span class="titulo-secao">Importados</span>
+            <div class="container-produtos">
+                <div class="swiper-wrapper cont-wrapper terceiro-wrapper" id="container03"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>        
+        </section>
+    </main>
+
+    <section class="form-footer">
+        <div class="container-form">
+            <h2 class="m-4">Receba todas as promoções</h2>
+            <p class="m-4">Quer receber nossas ofertas? Cadastre-se e comece a recebê-las!</p>
+            <form action="">
+               <input type="email" class="input-form" placeholder="E-mail">
+            </form>
+        </div>
+    </section>
+     
+    <section class="banner-instagram">
+        <div class="cont-insta">
+            <span class="nome-insta"><img src="./l/kk-removebg-preview.png" width="50" height="50" class="fa">&#xf16d;</i><h2>atelie_panofino</h2></span>
+            <p>Estamos no Instagram</p>
+            <span class="btn-insta">Siga-nos</span>
+        </div>
+    </section>
+
+    <footer>
+        <section class="contfoot">
+            <div class="conttxt">
+                <div>
+                    <h2>Redes sociais</h2>
+                    <ul>
+                        <li><img src="./l/kk-removebg-preview.png" width="30" height="30">@atelie_panofino</li>
+                        <li><img src="./l/x-removebg-preview.png" width="30" height="30">@atelie_panofino</li>
+                        <li><img src="./l/face-removebg-preview.png" width="30" height="30">@atelie_panofino</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contimg">
+               
+            </div>
+        </section>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>

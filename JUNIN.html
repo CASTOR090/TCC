@@ -6,7 +6,7 @@
     <title>Ateliê Pano Fino</title>
     
     <style>
-        /* Reseta alguns estilos padrão */
+        /* Reseta estilos padrão */
         * {
             margin: 0;
             padding: 0;
@@ -19,23 +19,19 @@
             background-color: #f5f5f5;
         }
 
-        /* Estilos do Header */
+        /* Header estilizado */
         header {
             background-color: #ffdede;
             border-bottom: 2px solid #6a0000;
-            padding: 10px 20px;
+            padding: 15px 0;
         }
 
         .top-header {
             background-color: #fbd7d7;
-            padding: 5px 20px;
             text-align: center;
             font-size: 14px;
             color: #6a0000;
-        }
-
-        .top-header .top.social i {
-            color: #6a0000;
+            padding: 5px 0;
         }
 
         .hdr {
@@ -46,16 +42,17 @@
         }
 
         .logoamf img {
-            height: 50px;
+            height: 60px;
         }
 
         .pesquisa {
             display: flex;
             align-items: center;
             border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 5px 10px;
+            border-radius: 25px;
+            padding: 5px 15px;
             background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .input-pesquisa {
@@ -63,45 +60,20 @@
             outline: none;
             padding: 5px;
             width: 200px;
-        }
-
-        .carrinho {
-            position: relative;
+            font-size: 16px;
         }
 
         .carrinho img {
             height: 40px;
+            cursor: pointer;
         }
 
-        .aba-carrinho-aberta {
-            display: none; /* Inicialmente escondido */
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-        .titulo-carrinho {
-            background-color: #ffdede;
-            border-bottom: 1px solid #ddd;
-            padding: 10px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #6a0000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
+        /* Barra de navegação */
         .nav-list {
             display: flex;
             justify-content: center;
-            padding: 10px 20px;
             background-color: #fff;
+            padding: 15px 0;
         }
 
         .nav-list a {
@@ -125,9 +97,14 @@
             width: 100%;
             height: auto;
             border-radius: 8px;
+            transition: transform 0.3s;
         }
 
-        /* Estilos do Main */
+        .swiper-slide img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Seções principais */
         .main-index {
             padding: 20px;
         }
@@ -135,18 +112,23 @@
         .container-categoria {
             display: flex;
             justify-content: space-around;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .categoria {
             position: relative;
             width: 30%;
-            height: 200px;
+            height: 250px;
             background-size: cover;
             background-position: center;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .categoria:hover {
+            transform: scale(1.05);
         }
 
         .overlay-categoria {
@@ -169,11 +151,12 @@
         }
 
         .titulo-categoria {
-            font-size: 24px;
+            font-size: 28px;
+            text-transform: uppercase;
         }
 
         .false-button-categoria {
-            margin-top: 10px;
+            margin-top: 15px;
             padding: 10px 20px;
             border: 1px solid #fff;
             border-radius: 5px;
@@ -188,8 +171,9 @@
             color: #6a0000;
         }
 
+        /* Seção Mais Vendidos */
         .secao-maisVendidos {
-            margin: 20px 0;
+            margin: 40px 0;
             padding: 20px;
             background-color: #ffdede;
             border-radius: 8px;
@@ -197,7 +181,7 @@
         }
 
         .titulo-secao {
-            font-size: 24px;
+            font-size: 26px;
             margin-bottom: 20px;
             text-align: center;
             color: #6a0000;
@@ -213,7 +197,7 @@
             color: #6a0000;
         }
 
-        /* Estilos do Banner Informativo */
+        /* Banner informativo */
         .banner-informativo {
             display: flex;
             justify-content: space-around;
@@ -238,7 +222,7 @@
             color: #6a0000;
         }
 
-        /* Estilos do Footer */
+        /* Footer */
         footer {
             background-color: #ffdede;
             padding: 20px;
@@ -285,6 +269,7 @@
             width: 100%;
             max-width: 400px;
             margin: 10px 0;
+            font-size: 16px;
         }
 
         .btn-insta {
@@ -313,7 +298,6 @@
 
             .nav-list {
                 flex-direction: column;
-                padding: 0;
             }
 
             .nav-list a {
@@ -328,193 +312,160 @@
 
             .categoria {
                 width: 80%;
-                height: 150px;
-                margin-bottom: 10px;
+                height: 180px;
+                margin-bottom: 15px;
             }
         }
     </style>
-    <!-- ICONS -->
-    <script src="https://kit.fontawesome.com/108acab114.js" crossorigin="anonymous" defer></script>
-    <!-- SWIPER -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<!-- ICONS -->
+<script src="https://kit.fontawesome.com/108acab114.js" crossorigin="anonymous" defer></script>
+<!-- SWIPER -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
-    <header>
-        <div class="top-header">
-            <div class="top social">
-                <span><i class="fa fa-phone"></i> Atendimento:(11)  99999-9999</span>
-                <span><i class="fa fa-envelope"></i> contato@ateliepano.com.br</span>
-            </div>
+<header>
+    <div class="top-header">
+        <span><i class="fa fa-phone"></i> Atendimento: (11) 99999-9999</span>
+        <span><i class="fa fa-envelope"></i> contato@ateliepano.com.br</span>
+    </div>
+    <div class="hdr">
+        <div class="logoamf">
+            <img src="./l/jj.png" width="160" height="100" alt="Logo Ateliê Pano Fino">
         </div>
-        <div class="hdr">
-            <div class="logoamf">
-                <img src="./l/jj.png" alt="Ateliê Pano Fino">
-            </div>
-            <div class="pesquisa">
-                <input type="text" class="input-pesquisa" placeholder="Pesquisar...">
-            </div>
-            <div class="user adm">
-                <a href="login.html">
-                    <img src="./l/e.png" width="60" height="50" alt="Descrição da Imagem">
-                  </a>
-                  
-                <link rel="stylesheet" href="login.css">
-                <link rel="stylesheet" href="login.html">
-                    </div>
-                </div>
-            </div>
+        <div class="pesquisa">
+            <input type="text" class="input-pesquisa" placeholder="Pesquise no site...">
+            <button class="input-btn"><i class="fas fa-search"></i></button>
         </div>
-        <div class="nav-list"> 
-            <a href="index.html">Início</a>
-            <a href="./html's/blusas.html">Blusas</a>
-            <a href="./html's/conjuntos.html">Conjuntos</a>
-            <a href="./html's/vestidos.html">Vestidos</a>
-            <a href="./html's/calcas.html">Calças</a>
-            <a href="./html's/saias.html">Saias</a>
-        </div>
-    </header>
-
-    <section class="carrosel">
-        <div class="swiper carrosel-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide card-carrosel"><img src="./img/pf_slide1-carrosel.jpg" class="img-pf_slide1-carrosel" alt=""></div>
-                <div class="swiper-slide"><img src="./img/pf_slide2-carrosel.webp" class="img-pf_slide2-carrosel" alt=""></div>
-                <div class="swiper-slide"><img src="./img/pf_slide3-carrosel.avif" class="img-pf_slide3-carrosel" alt=""></div>
-                <div class="swiper-slide"><img src="./img/img-slide4-carrosel" class="img-pf_slide4-carrosel" alt=""></div>
+        <a href="login.html" target="_blank">
+            <div class="user">
+                <img src="./l/e.png" width="70" height="50">
             </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-
-    <main class="main-index">
-        <section class="contmain">
-            <div class="container-categoria">
-                <div class="categoria street" style="background-image: url('./l/foto2.png');">
-                    <div class="overlay-categoria">
-                        <div class="titulo-categoria">
-                            <p>VESTIDOS</p>
-                            <br>
-                            <span class="false-button-categoria">Explorar</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="categoria street2" style="background-image: url('./l/foto5.png');">
-                    <div class="overlay-categoria">
-                        <div class="titulo-categoria">
-
-                            <p>CALÇAS</p>
-                            <br>
-                            <span class="false-button-categoria">Explorar</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="categoria vintage" style="background-image: url('./l/12\ 2.png');">
-                    <div class="overlay-categoria">
-                        <div class="titulo-categoria">
-                            <p>SAIAS</p>
-                            <br>
-                            <span class="false-button-categoria">Explorar</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="secao-maisVendidos">
-            <span class="titulo-secao">Mais Vendidos</span>
-            <div class="container-produtos">
-                <div class="swiper-wrapper cont-wrapper" id="container01"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>        
-        </section>
-
-        <div class="banner-informativo">
-            <div class="informativo">
-                <div class="aling-center-info">
-                    <div class="div-img-info">
-                        <img src="./l/foto4.png"  width="70px" height="70px" alt="">
-                    </div>
-                    <h3>CONJUNTOS</h3>
-                </div>
-            </div>
-            <div class="informativo">
-                <div class="aling-center-info">
-                    <div class="div-img-info">
-                        <img src="./l/foto1.png" width="70px" height="70px" alt="">
-                    </div>
-                    <h3>CASACOS</h3>
-                </div>
-            </div>
-            <div class="informativo">
-                <div class="aling-center-info">
-                    <div class="div-img-info">
-                        <img src="./l/foto5.png" width="70px" height="70px" alt="">
-                    </div>
-                    <h3>CALÇAS</h3>
-                </div>
-            </div>
-            <div class="informativo">
-                <div class="aling-center-info">
-                    <div class="div-img-info">
-                        <img src="./l/j.png" width="70px" height="70px" alt="">
-                    </div>
-                    <h3>CAMISETAS</h3>
-                </div>
-            </div>
-        </div>
-
-
- 
-        <section class="secao-maisVendidos terceira-section">
-            <span class="titulo-secao">Roupas mais vendidas</span>
-            <div class="container-produtos">
-                <div class="swiper-wrapper cont-wrapper terceiro-wrapper" id="container03"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <img src="./l/j.png" width="70px" height="70px" alt="left" class="centralizado">
-            </div>        
-        </section>
+        </a>
         
-    </main>
+    </div>
+</header>
 
-    <section class="form-footer">
-        <div class="container-form">
-            <h2 class="m-4">Receba todas as promoções</h2>
-            <p class="m-4">Quer receber nossas ofertas? Cadastre-se e comece a recebê-las!</p>
-            <form action="">
-               <input type="email" class="input-form" placeholder="E-mail">
-            </form>
-        </div>
-    </section>
-     
-    <section class="banner-instagram">
-        <div class="cont-insta">
-            <span class="nome-insta"><img src="./l/kk-removebg-preview.png" width="50" height="50" class="fa">&#xf16d;</i><h2>atelie_panofino</h2></span>
-            <p>Estamos no Instagram</p>
-            <span class="btn-insta">Siga-nos</span>
-        </div>
-    </section>
+<nav class="nav-list">
+    <a href="#">Home</a>
+    <a href="#">Produtos</a>
+    <a href="#">Sobre Nós</a>
+    <a href="#">Contato</a>
+</nav>
 
-    <footer>
-        <section class="contfoot">
-            <div class="conttxt">
-                <div>
-                    <h2>Redes sociais</h2>
-                    <ul>
-                        <li><img src="./l/kk-removebg-preview.png" width="30" height="30">@atelie_panofino</li>
-                        <li><img src="./l/x-removebg-preview.png" width="30" height="30">@atelie_panofino</li>
-                        <li><img src="./l/face-removebg-preview.png" width="30" height="30">@atelie_panofino</li>
-                    </ul>
+<section class="carrosel">
+</section>
+
+<section class="main-index">
+    <div class="container-categoria">
+        <div class="categoria" style="background-image: url('./l/foto2.png')">
+            <div class="overlay-categoria">
+                <div class="content">
+                    <div class="titulo-categoria">VESTIDOS</div>
+                    <div class="false-button-categoria">Saiba Mais</div>
                 </div>
             </div>
-            <div class="contimg">
-               
+        </div>
+        <div class="categoria" style="background-image: url('./l/nove.png')">
+            <div class="overlay-categoria">
+                <div class="content">
+                    <div class="titulo-categoria">camisetas</div>
+                    <div class="false-button-categoria">Saiba Mais</div>
+                </div>
             </div>
-        </section>
-    </footer>
+        </div>
+        <div class="categoria" style="background-image: url('./l/foto1.png')">
+            <!-- Imagem de categoria 3, adicione a imagem aqui -->
+            <div class="overlay-categoria">
+                <div class="content">
+                    <div class="titulo-categoria">conjuntos</div>
+                    <div class="false-button-categoria">Saiba Mais</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script src="./scripts/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<section class="secao-maisVendidos">
+    <div class="titulo-secao">Mais Vendidos</div>
+    <div class="container-produtos">
+        <div class="produto">
+            <img src="./l/foto4.png" width="105" height="105" alt="Conjunto de Outono">
+            <div class="produto-descricao">
+                <h3>Conjunto de Outono</h3>
+                <p>R$ 199,90</p>
+                <p>Cojunto para você aproveitar esse outono com estilo.</p>
+            </div>
+        </div>
+        <div class="produto">
+            <img src="./l/j.png" alt="Produto 2">
+            <div class="produto-descricao">
+                <h3>Camiseta Social Branca</h3>
+                <p>R$ 100,00</p>
+                <p>Camiseta social branca otima para dia a dia. </p>
+            </div>
+        </div>
+        <div class="produto">
+            <img src="./l/doze.png" alt="Produto 3">
+            <div class="produto-descricao">
+                <h3>Saia Azul</h3>
+                <p>R$ 100,00</p>
+                <p>Excelete para looks sociais.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="banner-informativo">
+    <div class="informativo">
+        <div class="div-img-info">
+            <!-- Imagem do Banner Informativo 1, adicione a imagem aqui -->
+            <img src="./l/lll-removebg-preview.png" width="90" height="90" alt="Banner 1">
+        </div>
+        <h3>Ateliê Pano Fino - Qualidade e Personalização</h3>
+    </div>
+    <div class="informativo">
+        <div class="div-img-info">
+            <!-- Imagem do Banner Informativo 2, adicione a imagem aqui -->
+            <img src="./l/caio-removebg-preview.png" width="150" height="100"alt="Banner 2">
+        </div>
+        <h3>Entrega para Todo o Brasil</h3>
+    </div>
+</div>
+
+<footer>
+    <div class="contfoot">
+        <div>
+            <h2>Institucional</h2>
+            <ul>
+                <li>Sobre Nós</li>
+                <li>Política de Privacidade</li>
+                <li>Termos de Serviço</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Atendimento</h2>
+            <ul>
+                <li>FAQ</li>
+                <li>Suporte</li>
+                <li>Contato</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Siga-nos</h2>
+            <ul>
+                <li><i class="fab fa-instagram"></i> Instagram</li>
+                <li><i class="fab fa-facebook"></i> Facebook</li>
+            </ul>
+        </div>
+    </div>
+    <div class="form-footer">
+        <input type="email" class="input-form" placeholder="Receba nossas novidades...">
+        <button class="btn-insta">Assinar Newsletter</button>
+    </div>
+</footer>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
-</html>
+</html

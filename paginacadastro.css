@@ -1,0 +1,94 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:#FFDEDE;
+    color: #800000;
+}
+
+a {
+    text-decoration: none;
+    color: #5464f5;
+}
+
+#login {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.name input {
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: white;
+    color: #800000;
+    margin-bottom: 15px;
+}
+
+.email input {
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color:white ;
+    color: #800000;
+}
+
+.senha input {
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: white;
+    color: #800000;
+    margin-top: 15px;
+}
+
+.entrar input {
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: #800000;
+}
+.b {
+    color: #800000; /* cor das palavras */
+    cursor: pointer;
+    background-color: #F08080; /* Cor de fundo da palavra */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 18px; /* Ajuste de tamanho da fonte */
+    border-style: none;
+}
+
+.b:hover {
+    color: #800000; /* Cor ao passar o mouse */
+}
+
+
+input::placeholder {
+    color: #800000;
+}
+
+h1 {
+    color: #800000;
+}
+
+.caixa {
+    margin-top: 65px;
+}
+
+.caixa img {
+    width: 115px;
+}
+
+input:focus {
+    outline: none;
+}

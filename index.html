@@ -6,7 +6,6 @@
     <title>Ateliê Pano Fino</title>
     
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -19,7 +18,6 @@
             background-color: #f5f5f5;
         }
 
-        /* Header estilizado */
         header {
             background-color: #ffdede;
             border-bottom: 2px solid #6a0000;
@@ -63,10 +61,6 @@
             font-size: 16px;
         }
 
-        .carrinho img {
-            height: 40px;
-            cursor: pointer;
-        }
         .nav-list {
             display: flex;
             justify-content: center;
@@ -86,23 +80,6 @@
             color: #f04c4c;
         }
 
-        /* Estilos do Carrossel */
-        .carrosel {
-            margin: 20px 0;
-        }
-
-        .swiper-slide img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-
-        .swiper-slide img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Seções principais */
         .main-index {
             padding: 20px;
         }
@@ -169,7 +146,6 @@
             color: #6a0000;
         }
 
-        /* Seção Mais Vendidos */
         .secao-maisVendidos {
             margin: 40px 0;
             padding: 20px;
@@ -183,17 +159,48 @@
             margin-bottom: 20px;
             text-align: center;
             color: #6a0000;
+            font-weight: bold;
         }
 
         .container-produtos {
             display: flex;
-            justify-content: space-between;
-            overflow: hidden;
+            justify-content: space-around;
+            margin-top: 10px;
         }
 
-        .swiper-button-next, .swiper-button-prev {
-            color: #6a0000;
+        .produto {
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            margin: 0 10px; /* Menos margem para aproximar os produtos */
+            transition: transform 0.3s;
         }
+
+        .produto img {
+            width: 130px; /* Aumentei a largura da imagem */
+            height: 130px; /* Aumentei a altura da imagem */
+            border-radius: 8px; /* Adicionei borda arredondada às imagens */
+            transition: transform 0.3s;
+        }
+
+        .produto img:hover {
+            transform: scale(1.1); /* Efeito de zoom na imagem ao passar o mouse */
+        }
+
+        .produto-descricao {
+            display: none;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 140px; /* Posiciona abaixo da imagem */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px; /* Largura fixa para a descrição */
+            z-index: 10; /* Para garantir que apareça acima dos outros elementos */
+        }
+
         .banner-informativo {
             display: flex;
             justify-content: space-around;
@@ -218,7 +225,6 @@
             color: #6a0000;
         }
 
-        /* Footer */
         footer {
             background-color: #ffdede;
             padding: 20px;
@@ -285,7 +291,12 @@
             color: #fff;
         }
 
-        /* Responsividade */
+        .produto{
+            margin-top: 30px;
+        }
+        .produto{
+           margin-top: 30px;
+        }
         @media (max-width: 768px) {
             .hdr {
                 flex-direction: column;
@@ -309,28 +320,30 @@
             .categoria {
                 width: 80%;
                 height: 180px;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
+            }
+
+            .container-produtos {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .produto {
+                margin: 10px 0; /* Margin vertical para mobile */
             }
         }
     </style>
-
-<!-- ICONS -->
-<script src="https://kit.fontawesome.com/108acab114.js" crossorigin="anonymous" defer></script>
-<!-- SWIPER -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
+
 <header>
-    <div class="top-header">
-        <span><i class="fa fa-phone"></i> Atendimento: (11) 99999-9999</span>
-        <span><i class="fa fa-envelope"></i> contato@ateliepano.com.br</span>
-    </div>
+    <div class="top-header">Promoções especiais para você!</div>
     <div class="hdr">
         <div class="logoamf">
-            <img src="./l/jj.png" width="160" height="100" alt="Logo Ateliê Pano Fino">
+            <img src="./l/jj.png" alt="Logo Ateliê Pano Fino">
         </div>
         <div class="pesquisa">
-            <input type="text" class="input-pesquisa" placeholder="Pesquise no site...">
+            <input type="text" class="input-pesquisa" placeholder="Buscar...">
             <button class="input-btn"><i class="fas fa-search"></i></button>
         </div>
         <a href="login.html" target="_blank">
@@ -338,7 +351,6 @@
                 <img src="./l/e.png" width="70" height="50">
             </div>
         </a>
-        
     </div>
 </header>
 
@@ -348,9 +360,6 @@
     <a href="#">Sobre Nós</a>
     <a href="#">Chat com o Ateliê</a>
 </nav>
-
-<section class="carrosel">
-</section>
 
 <section class="main-index">
     <div class="container-categoria">
@@ -365,16 +374,15 @@
         <div class="categoria" style="background-image: url('./l/nove.png')">
             <div class="overlay-categoria">
                 <div class="content">
-                    <div class="titulo-categoria">camisetas</div>
+                    <div class="titulo-categoria">CAMISETAS</div>
                     <div class="false-button-categoria">Saiba Mais</div>
                 </div>
             </div>
         </div>
         <div class="categoria" style="background-image: url('./l/foto1.png')">
-            <!-- Imagem de categoria 3, adicione a imagem aqui -->
             <div class="overlay-categoria">
                 <div class="content">
-                    <div class="titulo-categoria">conjuntos</div>
+                    <div class="titulo-categoria">CONJUNTOS</div>
                     <div class="false-button-categoria">Saiba Mais</div>
                 </div>
             </div>
@@ -385,28 +393,28 @@
 <section class="secao-maisVendidos">
     <div class="titulo-secao">Mais Vendidos</div>
     <div class="container-produtos">
-        <div class="produto">
-            <img src="./l/foto4.png" width="105" height="105" alt="Conjunto de Outono">
-            <div class="produto-descricao">
+        <div class="produto" onclick="toggleDescricao('desc1')">
+            <img src="./l/foto4.png" alt="Conjunto de Outono">
+            <div id="desc1" class="produto-descricao">
                 <h3>Conjunto de Outono</h3>
                 <p>R$ 199,90</p>
-                <p>Cojunto para você aproveitar esse outono com estilo.</p>
+                <p>Conjunto para você aproveitar esse outono com estilo.</p>
             </div>
         </div>
-        <div class="produto">
-            <img src="./l/j.png" alt="Produto 2">
-            <div class="produto-descricao">
+        <div class="produto" onclick="toggleDescricao('desc2')">
+            <img src="./l/j.png" alt="Camiseta Social Branca">
+            <div id="desc2" class="produto-descricao">
                 <h3>Camiseta Social Branca</h3>
                 <p>R$ 100,00</p>
-                <p>Camiseta social branca otima para dia a dia. </p>
+                <p>Camiseta social branca ótima para o dia a dia.</p>
             </div>
         </div>
-        <div class="produto">
-            <img src="./l/doze.png" alt="Produto 3">
-            <div class="produto-descricao">
+        <div class="produto" onclick="toggleDescricao('desc3')" >
+            <img src="./l/doze.png" alt="Saia Azul">
+            <div id="desc3" class="produto-descricao">
                 <h3>Saia Azul</h3>
                 <p>R$ 100,00</p>
-                <p>Excelete para looks sociais.</p>
+                <p>Excelente para looks sociais.</p>
             </div>
         </div>
     </div>
@@ -415,14 +423,13 @@
 <div class="banner-informativo">
     <div class="informativo">
         <div class="div-img-info">
-            <!-- Imagem do Banner Informativo 1, adicione a imagem aqui -->
             <img src="./l/lll-removebg-preview.png" width="90" height="90" alt="Banner 1">
         </div>
         <h3>Ateliê Pano Fino - Qualidade e Personalização</h3>
     </div>
     <div class="informativo">
         <div class="div-img-info">
-            <img src="./l/caio-removebg-preview.png" width="150" height="100"alt="Banner 2">
+            <img src="./l/caio-removebg-preview.png" width="150" height="100" alt="Banner 2">
         </div>
         <h3>Entrega para Todo o Brasil</h3>
     </div>
@@ -460,7 +467,22 @@
     </div>
 </footer>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    function toggleDescricao(id) {
+        const descricao = document.getElementById(id);
+        const todasDescricoes = document.querySelectorAll('.produto-descricao');
+        
+        // Oculta todas as descrições antes de exibir a atual
+        todasDescricoes.forEach(desc => {
+            if (desc !== descricao) {
+                desc.style.display = "none";
+            }
+        });
+
+        // Alterna a exibição da descrição clicada
+        descricao.style.display = descricao.style.display === "block" ? "none" : "block";
+    }
+</script>
+
 </body>
-</html
+</html>

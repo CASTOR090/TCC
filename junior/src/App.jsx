@@ -1,3 +1,7 @@
+import Titulo from "./titulo"
+
 function App(){
-  return 
+  return <h1>vsfd</h1>
 }
+
+export default App

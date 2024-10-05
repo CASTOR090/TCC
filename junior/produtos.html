@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Ateliê Pano Fino</title>
+    
+    <style>
+        /* Reseta estilos padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #ffdede;
+            border-bottom: 2px solid #6a0000;
+            padding: 15px 0;
+        }
+
+        .hdr {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center; /* Centraliza os itens */
+            padding: 15px 0;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #6a0000;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-list a:hover {
+            color: #f04c4c;
+        }
+
+        .main-produtos {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .produto {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 15px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .produto img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .produto h3 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #6a0000;
+        }
+
+        .produto p {
+            margin: 5px 0;
+        }
+
+        .btn-comprar {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: 1px solid #6a0000;
+            background-color: #6a0000;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-comprar:hover {
+            background-color: #f04c4c;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #ffdede;
+            padding: 20px;
+            border-top: 2px solid #6a0000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="hdr">
+        <div class="logoamf">
+            <img src="./l/jj.png" width="140" height="65" alt="Logo Ateliê Pano Fino">
+        </div>
+    </div>
+    <nav class="nav-list">
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="qrcode.html">Mobile</a>
+        <a href="suporte.html">Suporte</a>
+    </nav>
+</header>
+
+<section class="main-produtos">
+    <div class="produto">
+        <img src="images/produto1.jpg" alt="Produto 1">
+        <h3>Produto 1</h3>
+        <p>R$ 199,90</p>
+        <p>Descrição curta do produto 1. Excelente qualidade e design único.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto2.jpg" alt="Produto 2">
+        <h3>Produto 2</h3>
+        <p>R$ 249,90</p>
+        <p>Descrição curta do produto 2. Conforto e elegância para o seu dia a dia.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto3.jpg" alt="Produto 3">
+        <h3>Produto 3</h3>
+        <p>R$ 299,90</p>
+        <p>Descrição curta do produto 3. Material de alta qualidade e durabilidade.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto4.jpg" alt="Produto 4">
+        <h3>Produto 4</h3>
+        <p>R$ 150,00</p>
+        <p>Descrição curta do produto 4. Ideal para o seu dia a dia.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto5.jpg" alt="Produto 5">
+        <h3>Produto 5</h3>
+        <p>R$ 350,00</p>
+        <p>Descrição curta do produto 5. Qualidade excepcional para os melhores momentos.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto6.jpg" alt="Produto 6">
+        <h3>Produto 6</h3>
+        <p>R$ 280,00</p>
+        <p>Descrição curta do produto 6. Um produto que combina qualidade e conforto.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto7.jpg" alt="Produto 7">
+        <h3>Produto 7</h3>
+        <p>R$ 220,00</p>
+        <p>Descrição curta do produto 7. A escolha perfeita para qualquer ocasião.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto8.jpg" alt="Produto 8">
+        <h3>Produto 8</h3>
+        <p>R$ 320,00</p>
+        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto8.jpg" alt="Produto 8">
+        <h3>Produto 8</h3>
+        <p>R$ 320,00</p>
+        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto8.jpg" alt="Produto 8">
+        <h3>Produto 8</h3>
+        <p>R$ 320,00</p>
+        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto8.jpg" alt="Produto 8">
+        <h3>Produto 8</h3>
+        <p>R$ 320,00</p>
+        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto8.jpg" alt="Produto 8">
+        <h3>Produto 8</h3>
+        <p>R$ 320,00</p>
+        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto8.jpg" alt="Produto 8">
+        <h3>Produto 8</h3>
+        <p>R$ 320,00</p>
+        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto8.jpg" alt="Produto 8">
+        <h3>Produto 8</h3>
+        <p>R$ 320,00</p>
+        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+    <div class="produto">
+        <img src="images/produto8.jpg" alt="Produto 8">
+        <h3>Produto 8</h3>
+        <p>R$ 320,00</p>
+        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Ateliê Pano Fino. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>

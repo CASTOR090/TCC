@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixe o App - Ateliê Pano Fino</title>
+    
+    <style>
+        /* Reseta estilos padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #ffdede;
+            border-bottom: 2px solid #6a0000;
+            padding: 15px 0;
+        }
+
+        .hdr {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center; /* Centraliza os itens */
+            padding: 15px 0;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #6a0000;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 1.1em;
+        }
+
+        .nav-list a:hover {
+            color: #f04c4c;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza os itens horizontalmente */
+            padding: 60px 20px;
+            text-align: center; /* Centraliza o texto */
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #6a0000;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin: 20px 0;
+            color: #6a0000;
+        }
+
+        p {
+            margin: 15px 0;
+            line-height: 1.6;
+            font-size: 1.1em;
+            max-width: 600px;
+        }
+
+        .qr-code {
+            margin: 20px 0;
+            width: 300px; /* Ajuste o tamanho conforme necessário */
+            max-width: 100%; /* Garante que não ultrapasse o tamanho do contêiner */
+            border: 2px solid #6a0000;
+            border-radius: 8px;
+            padding: 10px; /* Adiciona um espaço ao redor do QR code */
+            background-color: #f5f5f5; /* Fundo claro para o QR code */
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+        }
+
+        .feature {
+            background-color: #ffdede;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 200px; /* Largura fixa para as features */
+        }
+
+        footer {
+            background-color: #ffdede;
+            padding: 20px;
+            border-top: 2px solid #6a0000;
+            text-align: center;
+        }
+
+        .social-icons a {
+            margin: 0 10px; /* Espaçamento entre os ícones */
+            color: #6a0000; /* Cor dos ícones */
+            font-size: 1.5em; /* Tamanho dos ícones */
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #f04c4c; /* Efeito hover nos ícones */
+        }
+    </style>
+
+    <!-- Ícones -->
+    <script src="https://kit.fontawesome.com/108acab114.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+<header>
+    <div class="hdr">
+        <div class="logoamf">
+            <img src="./l/jj.png" width="120" height="70" alt="Logo Ateliê Pano Fino" style="height: 50px;"> <!-- Ajuste o tamanho da logo conforme necessário -->
+        </div>
+    </div>
+    <nav class="nav-list">
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="qrcode.html">mobile</a>
+        <a href="suporte.html">Suporte</a>
+    </nav>
+</header>
+
+<div class="content">
+    <h1>Baixe o nosso App!</h1>
+    <p>Desfrute de uma experiência de compras ainda melhor com o nosso aplicativo. O nosso app oferece acesso a produtos exclusivos, promoções especiais e uma navegação simplificada.</p>
+    
+    <img class="qr-code" src="https://cdn.prod.website-files.com/60870fec5b198a263fa79bcb/60f990f98a1d42206faf2509_codigo-qr.png" alt="QR Code para baixar o app">
+    
+    <p>Escaneie o QR Code acima para baixar o aplicativo e comece a explorar nossas ofertas incríveis!</p>
+
+    <h2>Por que baixar nosso app?</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>Ofertas Exclusivas</h3>
+            <p>Acesso a promoções que você não encontrará em nenhum outro lugar!</p>
+        </div>
+        <div class="feature">
+            <h3>Navegação Simples</h3>
+            <p>Encontre seus produtos favoritos com facilidade e rapidez.</p>
+        </div>
+        <div class="feature">
+            <h3>Novidades em Tempo Real</h3>
+            <p>Receba notificações sobre novos produtos e ofertas especiais.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Ateliê Pano Fino. Todos os direitos reservados.</p>
+    <div class="social-icons">
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer>
+</body>
+</html>

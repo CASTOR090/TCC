@@ -50,6 +50,51 @@
         .nav-list a:hover {
             color: #f04c4c;
         }
+        header {
+    background-color: #ffdede; /* Cor de fundo do cabeçalho */
+    padding: 10px; /* Reduz o espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.hdr {
+    display: flex; /* Usando flexbox para alinhas os itens */
+    justify-content: space-between; /* Espaça logo e barra de navegação */
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 0px; /* Reduz o espaço abaixo do hdr */
+}
+
+.logoamf img {
+    height: 40px; /* Reduz a altura da logo */
+}
+.input-btn {
+    padding: 8px 12px; /* Reduz o espaço interno no botão */
+    background-color: #6a0000; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 0 5px 5px 0; /* Bordas arredondadas à direita */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+}
+
+.input-btn:hover {
+    background-color: #8a0000; /* Cor do botão ao passar o mouse */
+}
+
+.nav-list {
+    display: flex; /* Usando flexbox para alinhar os links de navegação */
+    justify-content: center; /* Centraliza os links */
+    padding: 5px 0; /* Reduz o espaçamento interno */
+}
+
+.nav-list a {
+    margin: 0 10px; /* Reduz o espaço entre os links */
+    color: #6a0000; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Negrito */
+}
+
+.nav-list a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
 
         .content {
             display: flex;
@@ -132,10 +177,10 @@
     <script src="https://kit.fontawesome.com/108acab114.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-<header>
+<header>    
     <div class="hdr">
         <div class="logoamf">
-            <img src="./l/jj.png" width="120" height="70" alt="Logo Ateliê Pano Fino" style="height: 50px;"> <!-- Ajuste o tamanho da logo conforme necessário -->
+            <img src="./l/jj.png" alt="Logo Ateliê Pano Fino" style="height: 50px;"> <!-- Ajuste o tamanho da logo conforme necessário -->
         </div>
     </div>
     <nav class="nav-list">
@@ -163,6 +208,10 @@
         <div class="feature">
             <h3>Navegação Simples</h3>
             <p>Encontre seus produtos favoritos com facilidade e rapidez.</p>
+        </div>
+        <div class="feature">
+            <h3>Suporte com o Atelie</h3>
+            <p>Entre em contato com o suporte para sasiar suas duvidas.</p>
         </div>
         <div class="feature">
             <h3>Novidades em Tempo Real</h3>

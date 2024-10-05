@@ -126,7 +126,7 @@
         }
 
         .titulo-categoria {
-            font-size: 28px;
+            font-size: 48px;
             text-transform: uppercase;
         }
 
@@ -153,14 +153,38 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .sore-nos{
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #ffdede;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
         .titulo-secao {
-            font-size: 26px;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #6a0000;
-            font-weight: bold;
-        }
+    font-size: 18px;
+    margin-bottom: 18px;
+    text-align: center;
+    color: #6a0000;
+    font-weight: bold;
+    background-color: #ffdede; /* Cor de fundo rosa */
+}
+
+.sobre-nos {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #6a0000;
+    font-weight: bold;
+    background-color: #ffdede; /* Cor de fundo rosa */
+}
+.sobre-nos {
+    background-color: #ffcccb; /* Fundo rosa claro */
+    padding: 20px; /* Espaço interno */
+    margin: 20px 50px 20px; /* Espaço externo: 20px em cima, 0 nas laterais, 10px embaixo */
+    text-align: center; /* Centraliza o texto */
+}
+
 
         .container-produtos {
             display: flex;
@@ -273,7 +297,59 @@
             margin: 10px 0;
             font-size: 16px;
         }
+        .kk {
+    display: inline-block; /* Para se comportar como um botão */
+    border: 1px solid #ddd; /* Borda do botão */
+    margin-top: 10px; /* Espaço acima do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: transparent; /* Cor de fundo inicial do botão */
+    color: white; /* Cor do texto do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave na cor de fundo e texto */
+}
 
+.kk:hover {
+    background-color: #fff; /* Cor de fundo ao passar o mouse */
+    color: #6a0000; /* Cor do texto ao passar o mouse */
+}
+
+.jj {
+    display: inline-block; /* Para se comportar como um botão */
+    border: 1px solid #ddd; /* Borda do botão */
+    margin-top: 10px; /* Espaço acima do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: transparent; /* Cor de fundo inicial do botão */
+    color: white; /* Cor do texto do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave na cor de fundo e texto */
+}
+
+.jj:hover {
+    background-color: #fff; /* Cor de fundo ao passar o mouse */
+    color: #6a0000; /* Cor do texto ao passar o mouse */
+}
+
+.mm {
+    display: inline-block; /* Para se comportar como um botão */
+    border: 1px solid #ddd; /* Borda do botão */
+    margin-top: 10px; /* Espaço acima do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: transparent; /* Cor de fundo inicial do botão */
+    color: white; /* Cor do texto do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave na cor de fundo e texto */
+}
+
+.mm:hover {
+    background-color: #fff; /* Cor de fundo ao passar o mouse */
+    color: #6a0000; /* Cor do texto ao passar o mouse */
+}
         .btn-insta {
             display: inline-block;
             padding: 10px 20px;
@@ -332,6 +408,22 @@
                 margin: 10px 0; /* Margin vertical para mobile */
             }
         }
+        .btn-comprar {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: 1px solid #6a0000;
+            background-color: #6a0000;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-comprar:hover {
+            background-color: #f04c4c;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -343,7 +435,7 @@
             <img src="./l/jj.png" alt="Logo Ateliê Pano Fino">
         </div>
         <div class="pesquisa">
-            <input type="text" class="input-pesquisa" placeholder="Buscar...">
+            <input type="text" class="input-pesquisa" placeholder="Buscar ">
             <button class="input-btn"><i class="fas fa-search"></i></button>
         </div>
         <a href="login.html" target="_blank">
@@ -367,7 +459,7 @@
             <div class="overlay-categoria">
                 <div class="content">
                     <div class="titulo-categoria">VESTIDOS</div>
-                    <div class="false-button-categoria">Saiba Mais</div>
+                    <a href="vestidos.html" class="jj">Saiba Mais</a>
                 </div>
             </div>
         </div>
@@ -375,7 +467,7 @@
             <div class="overlay-categoria">
                 <div class="content">
                     <div class="titulo-categoria">CAMISETAS</div>
-                    <div class="false-button-categoria">Saiba Mais</div>
+                    <a href="camisetas.html" class="kk">Saiba Mais</a>
                 </div>
             </div>
         </div>
@@ -383,14 +475,14 @@
             <div class="overlay-categoria">
                 <div class="content">
                     <div class="titulo-categoria">CONJUNTOS</div>
-                    <div class="false-button-categoria">Saiba Mais</div>
+                    <a href="conjuntos.html" class="mm">Saiba Mais</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="secao-maisVendidos">
+<section class="secao-maisVendidos" style="background-color: #ffeef8;">
     <div class="titulo-secao">Mais Vendidos</div>
     <div class="container-produtos">
         <div class="produto" onclick="toggleDescricao('desc1')">
@@ -399,6 +491,7 @@
                 <h3>Conjunto de Outono</h3>
                 <p>R$ 199,90</p>
                 <p>Conjunto para você aproveitar esse outono com estilo.</p>
+                <button class="btn-comprar">Comprar</button>
             </div>
         </div>
         <div class="produto" onclick="toggleDescricao('desc2')">
@@ -407,14 +500,34 @@
                 <h3>Camiseta Social Branca</h3>
                 <p>R$ 100,00</p>
                 <p>Camiseta social branca ótima para o dia a dia.</p>
+                <button class="btn-comprar">Comprar</button>
             </div>
         </div>
-        <div class="produto" onclick="toggleDescricao('desc3')" >
-            <img src="./l/doze.png" alt="Saia Azul">
+        <div class="produto" onclick="toggleDescricao('desc3')">
+            <img src="./l/j.png" alt="Camiseta Social Branca">
             <div id="desc3" class="produto-descricao">
+                <h3>Camiseta Social Branca</h3>
+                <p>R$ 100,00</p>
+                <p>Camiseta social branca ótima para o dia a dia.</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+        <div class="produto" onclick="toggleDescricao('desc4')">
+            <img src="./l/j.png" alt="Camiseta Social Branca">
+            <div id="desc4" class="produto-descricao">
+                <h3>Camiseta Social Branca</h3>
+                <p>R$ 100,00</p>
+                <p>Camiseta social branca ótima para o dia a dia.</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+        <div class="produto" onclick="toggleDescricao('desc5')">
+            <img src="./l/doze.png" alt="Saia Azul">
+            <div id="desc5" class="produto-descricao">
                 <h3>Saia Azul</h3>
                 <p>R$ 100,00</p>
                 <p>Excelente para looks sociais.</p>
+                <button class="btn-comprar">Comprar</button>
             </div>
         </div>
     </div>
@@ -466,10 +579,16 @@
     </div>
 </footer>
 
-<section class="secao-maisVendidos">
-    <div class="titulo-secao">sobre nos</div>
+<section class="sobre-nos">
+    <div class="sobre-nos">Sobre nos</div>
 
-    <h4> caio gaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</h4>
+    <p>Bem-vindo ao nosso ateliê de personalização! Aqui, transformamos suas ideias em realidade, criando peças únicas que refletem sua personalidade e estilo. Com uma equipe apaixonada e talentosa, combinamos técnicas artesanais e design inovador para oferecer produtos personalizados que contam a sua história.</p>
+        
+    <p>Nosso compromisso é proporcionar uma experiência única a cada cliente. Seja na personalização de roupas, acessórios ou itens decorativos, acreditamos que cada detalhe faz a diferença. Trabalhamos com materiais de alta qualidade e respeitamos práticas sustentáveis, sempre buscando minimizar nosso impacto no meio ambiente.</p>
+    
+    <p>Além disso, nossa missão é inspirar criatividade e autoexpressão. Queremos que você se sinta parte do processo, desde a escolha das cores até a definição do design. Cada projeto é uma colaboração, e estamos aqui para ajudar você a encontrar a sua voz através da personalização.</p>
+    
+    <p>Venha nos visitar e descubra como podemos criar algo especial juntos. No nosso ateliê, cada peça é uma obra de arte feita sob medida para você!</p>
     
         
             

@@ -22,7 +22,7 @@
         header {
             background-color: #ffdede;
             border-bottom: 2px solid #6a0000;
-            padding: 15px 0;
+            padding: 0px 0px;
         }
 
         .hdr {
@@ -106,13 +106,91 @@
             border-top: 2px solid #6a0000;
             text-align: center;
         }
+        .secao-maisVendidos {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-secao {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #6a0000;
+    font-weight: bold;
+}
+
+.container-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produto {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.produto h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #6a0000;
+}
+
+.produto p {
+    margin: 5px 0;
+}
+
+.produto-descricao {
+    display: none; /* Escondemos a descrição inicialmente */
+}
+
+.produto:hover .produto-descricao {
+    display: block; /* Mostra a descrição ao passar o mouse */
+}
+.btn-comprar {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background-color: #6a0000; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #f04c4c; /* Cor ao passar o mouse */
+    color: #fff; /* Mantém a cor do texto ao passar o mouse */
+}
+
+
     </style>
 </head>
 <body>
 <header>
     <div class="hdr">
         <div class="logoamf">
-            <img src="./l/jj.png" width="140" height="65" alt="Logo Ateliê Pano Fino">
+            <img src="./l/jj.png" alt="Logo Ateliê Pano Fino" style="height: 50px;">
         </div>
     </div>
     <nav class="nav-list">
@@ -123,113 +201,105 @@
     </nav>
 </header>
 
-<section class="main-produtos">
-    <div class="produto">
-        <img src="images/produto1.jpg" alt="Produto 1">
-        <h3>Produto 1</h3>
-        <p>R$ 199,90</p>
-        <p>Descrição curta do produto 1. Excelente qualidade e design único.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto2.jpg" alt="Produto 2">
-        <h3>Produto 2</h3>
-        <p>R$ 249,90</p>
-        <p>Descrição curta do produto 2. Conforto e elegância para o seu dia a dia.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto3.jpg" alt="Produto 3">
-        <h3>Produto 3</h3>
-        <p>R$ 299,90</p>
-        <p>Descrição curta do produto 3. Material de alta qualidade e durabilidade.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto4.jpg" alt="Produto 4">
-        <h3>Produto 4</h3>
-        <p>R$ 150,00</p>
-        <p>Descrição curta do produto 4. Ideal para o seu dia a dia.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto5.jpg" alt="Produto 5">
-        <h3>Produto 5</h3>
-        <p>R$ 350,00</p>
-        <p>Descrição curta do produto 5. Qualidade excepcional para os melhores momentos.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto6.jpg" alt="Produto 6">
-        <h3>Produto 6</h3>
-        <p>R$ 280,00</p>
-        <p>Descrição curta do produto 6. Um produto que combina qualidade e conforto.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto7.jpg" alt="Produto 7">
-        <h3>Produto 7</h3>
-        <p>R$ 220,00</p>
-        <p>Descrição curta do produto 7. A escolha perfeita para qualquer ocasião.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto8.jpg" alt="Produto 8">
-        <h3>Produto 8</h3>
-        <p>R$ 320,00</p>
-        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto8.jpg" alt="Produto 8">
-        <h3>Produto 8</h3>
-        <p>R$ 320,00</p>
-        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto8.jpg" alt="Produto 8">
-        <h3>Produto 8</h3>
-        <p>R$ 320,00</p>
-        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto8.jpg" alt="Produto 8">
-        <h3>Produto 8</h3>
-        <p>R$ 320,00</p>
-        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto8.jpg" alt="Produto 8">
-        <h3>Produto 8</h3>
-        <p>R$ 320,00</p>
-        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto8.jpg" alt="Produto 8">
-        <h3>Produto 8</h3>
-        <p>R$ 320,00</p>
-        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto8.jpg" alt="Produto 8">
-        <h3>Produto 8</h3>
-        <p>R$ 320,00</p>
-        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
-        <button class="btn-comprar">Comprar</button>
-    </div>
-    <div class="produto">
-        <img src="images/produto8.jpg" alt="Produto 8">
-        <h3>Produto 8</h3>
-        <p>R$ 320,00</p>
-        <p>Descrição curta do produto 8. Versatilidade e estilo em um só produto.</p>
-        <button class="btn-comprar">Comprar</button>
+<section class="secao-maisVendidos" style="background-color: #ffeef8;">
+    <div class="titulo-secao">Mais Vendidos - Seção 1</div>
+    <div class="container-produtos">
+        <div class="produto" onclick="toggleDescricao('desc1')">
+            <img src="./l/foto4.png" alt="Conjunto de Outono">
+            <div id="desc1" class="produto-descricao">
+                <h3>Conjunto de Outono</h3>
+                <p>R$ 199,90</p>
+                <p>Conjunto para você aproveitar esse outono com estilo.</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+        <div class="produto" onclick="toggleDescricao('desc2')">
+            <img src="./l/j.png" alt="Camiseta Social Branca">
+            <div id="desc2" class="produto-descricao">
+                <h3>Camiseta Social Branca</h3>
+                <p>R$ 100,00</p>
+                <p>Camiseta social branca ótima para o dia a dia.</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+        <div class="produto" onclick="toggleDescricao('desc3')">
+            <img src="./l/doze.png" alt="Saia Azul">
+            <div id="desc3" class="produto-descricao">
+                <h3>Saia Azul</h3>
+                <p>R$ 100,00</p>
+                <p>Excelente para looks sociais.</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
     </div>
 </section>
+
+<section class="secao-maisVendidos" style="background-color: #ffeef8;">
+    <div class="titulo-secao">Mais Vendidos - Seção 1</div>
+    <div class="container-produtos">
+        <div class="produto" onclick="toggleDescricao('desc1')">
+            <img src="./l/foto4.png" alt="Conjunto de Outono">
+            <div id="desc1" class="produto-descricao">
+                <h3>Conjunto de Outono</h3>
+                <p>R$ 199,90</p>
+                <p>Conjunto para você aproveitar esse outono com estilo.</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+        <div class="produto" onclick="toggleDescricao('desc2')">
+            <img src="./l/j.png" alt="Camiseta Social Branca">
+            <div id="desc2" class="produto-descricao">
+                <h3>Camiseta Social Branca</h3>
+                <p>R$ 100,00</p>
+                <p>Camiseta social branca ótima para o dia a dia.</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+        <div class="produto" onclick="toggleDescricao('desc3')">
+            <img src="./l/doze.png" alt="Saia Azul">
+            <div id="desc3" class="produto-descricao">
+                <h3>Saia Azul</h3>
+                <p>R$ 100,00</p>
+                <p>Excelente para looks sociais.</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="secao-maisVendidos" style="background-color: #ffeef8;">
+    <div class="titulo-secao">Mais Vendidos - Seção 1</div>
+    <div class="container-produtos">
+        <div class="produto" onclick="toggleDescricao('desc1')">
+            <img src="./l/foto4.png" alt="Conjunto de Outono">
+            <div id="desc1" class="produto-descricao">
+                <h3>Conjunto de Outono</h3>
+                <p>R$ 199,90</p>
+                <p>Conjunto para você aproveitar esse outono com estilo.</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+        <div class="produto" onclick="toggleDescricao('desc2')">
+            <img src="./l/j.png" alt="Camiseta Social Branca">
+            <div id="desc2" class="produto-descricao">
+                <h3>Camiseta Social Branca</h3>
+                <p>R$ 100,00</p>
+                <p>Camiseta social branca ótima para o dia a dia.</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+        <div class="produto" onclick="toggleDescricao('desc3')">
+            <img src="./l/doze.png" alt="Saia Azul">
+            <div id="desc3" class="produto-descricao">
+                <h3>Saia Azul</h3>
+                <p>R$ 100,00</p>
+                <p>Excelente para looks sociais.</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <footer>
     <p>&copy; 2024 Ateliê Pano Fino. Todos os direitos reservados.</p>
